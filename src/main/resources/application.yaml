@@ -1,0 +1,39 @@
+#arquivo de configuracoes local/default
+
+#port config
+server:
+  port: 8090
+
+#profile config
+spring:
+  application:
+    name: "label"
+  config:
+    profiles:
+      active: ""
+  #database config
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:15432/label?currentSchema=public"
+    username: "admin"
+    password: "admin"
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  #flyway config
+  flyway:
+    locations: "db/migration"
+    baseline-on-migrate: true
+
+  #devtools config
+  devtools:
+    restart:
+      enabled: true
+
+#swagger config
+springdoc:
+  swagger-ui:
+    path: "/labels/swagger-ui.html"
