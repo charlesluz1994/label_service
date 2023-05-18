@@ -26,9 +26,9 @@
     cd ~/project
 
 #clone your project from git repository
-    git clone https://github.com/charlesluz1994/tutorial-spring-docker-terraform-aws.git
-    cd tutorial-spring-docker-terraform-aws
-    git checkout master
+    git clone https://github.com/charlesluz1994/label_service.git
+    cd label_service
+    git checkout main
     git pull
     cd deploy/docker
 

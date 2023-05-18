@@ -23,7 +23,7 @@ services:
 
   label-service-api:
     container_name: label-service-api
-    image: docker.io/library/label:0.0.1-SNAPSHOT
+    image: charlesluz94/label-service-api-v1
     environment:
       SERVER_PORT: 3000
       SPRING_PROFILES_ACTIVE: prod
