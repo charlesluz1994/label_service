@@ -60,6 +60,11 @@ Delete a label by its code
 
 DELETE /labels/{code} HTTP/1.1
 ```
+  
+### Spring Doc
+
+The Swagger is accesible in this url:
+http://ec2-44-195-32-62.compute-1.amazonaws.com/labels/swagger-ui/index.html
 
 ### Dependencies
 
