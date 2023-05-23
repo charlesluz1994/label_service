@@ -10,13 +10,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Entity
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "label")
-public class Label {
+public class Label implements Serializable {
+
 
     @Id
     @Column(name = "code", nullable = false)
