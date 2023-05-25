@@ -28,12 +28,12 @@ public class LabelService {
     }
 
     public Optional<Label> getLabelByCode(String code) {
-        Optional<Label> existingLabel = labelRepository.findByCode(code);
-        if (existingLabel.isEmpty()) {
-            throw new LabelResourceNotFoundException("Label not found with this code " + existingLabel.get().getCode());
+        Optional<Label> expectedLabel = labelRepository.findByCode(code);
+        if (expectedLabel.isEmpty()) {
+            throw new LabelResourceNotFoundException("Label not found with this code " + expectedLabel.get().getCode());
         }
 
-        return existingLabel;
+        return expectedLabel;
     }
 
     public void deleteLabel(String code) {
